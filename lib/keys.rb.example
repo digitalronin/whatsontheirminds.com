@@ -1,0 +1,4 @@
+module Keys
+  YAHOO_API_KEY = 'put your yahoo api key here'
+  TWFY_API_KEY = 'put your TheyWorkForYou.com api key here'
+end

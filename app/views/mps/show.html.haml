@@ -1,0 +1,11 @@
+%p.back_link
+  =link_to 'back', mps_path
+
+%h1= @mp.cloud.title
+
+%h2= "#{@mp.party} MP for #{@mp.constituency}"
+
+#cloud
+  %ul
+    = render :partial => @mp.cloud.words
+

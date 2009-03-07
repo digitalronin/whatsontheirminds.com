@@ -1,0 +1,9 @@
+.DS_Store
+*~
+*.swp
+*.log
+/config/database.yml
+/coverage
+/tmp/**/*
+public/stylesheets/parlour_tag.css
+lib/keys.rb
