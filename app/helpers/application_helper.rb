@@ -2,8 +2,8 @@
 module ApplicationHelper
 
   def cloud_tag(word)
-    style = "font-size: #{word.value * 50}%; left: #{word.x}px; top: #{word.y}px"
-    %[<li class='word' style="#{style}">#{word.text}</li>\n]
+    style = "font-size: #{word.size_factor}em; left: #{word.x}px; top: #{word.y}px"
+    %[<li class='word' style="#{style}">#{word.text} (#{word.value})</li>\n]
   end
 
 end
