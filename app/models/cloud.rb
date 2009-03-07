@@ -3,7 +3,7 @@ class Cloud
 
   def initialize(params)
     @mp = params[:mp]
-    @title = "#{@mp.full_name} Written Answers"
+    @title = "#{@mp.full_name} Written Questions"
     @words = count_words
   end
 

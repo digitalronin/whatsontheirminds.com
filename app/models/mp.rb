@@ -31,7 +31,7 @@ class Mp
 
   def self.instantiate(obj)
     mp = Mp.new
-    mp.full_name = obj.full_name.blank? ? obj.name : obj.full_name
+    mp.full_name = obj.respond_to?(:full_name) ? obj.full_name : obj.name
     mp.person_id = obj.person_id
     mp.party = obj.party
     mp.constituency = obj.constituency.name
