@@ -6,7 +6,9 @@ class Mp
   attr_accessor :full_name, :person_id, :constituency, :party
 
   def self.fetch_list
-    mps = self.twfy_client.mps.collect do |obj| 
+    objs = self.twfy_client.mps
+    RAILS_DEFAULT_LOGGER.debug objs.inspect
+    mps = objs.collect do |obj| 
       self.instantiate obj
     end
     mps.sort {|a,b| a.surname <=> b.surname}
@@ -31,7 +33,7 @@ class Mp
 
   def self.instantiate(obj)
     mp = Mp.new
-    mp.full_name = obj.respond_to?(:full_name) ? obj.full_name : obj.name
+    mp.full_name = obj.respond_to?(:full_name) ? obj.full_name.to_s : obj.name.to_s
     mp.person_id = obj.person_id
     mp.party = obj.party
     mp.constituency = obj.constituency.name
@@ -39,11 +41,12 @@ class Mp
   end
 
   def surname
-    full_name.split(/ /)[-1]
+    RAILS_DEFAULT_LOGGER.debug "SURNAME: #{@full_name}"
+    @full_name.split(/ /)[-1]
   end
 
   def to_param
-    "#{person_id}-#{full_name.gsub(/ /, '-')}"
+    "#{person_id}-#{@full_name.gsub(/ /, '-')}"
   end
 
   def cloud
@@ -58,9 +61,7 @@ class Mp
   private
 
   def twfy_client
-    @twfy_client ||= Twfy::Client.new 'BhY7C9EahUERCUYYaCCfNp5T'
+    @twfy_client ||= Twfy::Client.new TWFY_API_KEY
   end
-
-
 
 end
