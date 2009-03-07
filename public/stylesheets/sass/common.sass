@@ -1,2 +1,510 @@
 body
-  :color red
+  :font-family "Gill Sans","Trebuchet MS",Verdana,Arial,Helvetica,sans-serif
+  :color #fff
+  :background-color #df4141
+  :font-variant small-caps
+
+  em
+    :text-decoration underline
+    :font-style normal
+
+  &.tumblog
+    :margin 0px
+
+
+#container
+  :width 810px
+  :margin 0 auto
+
+
+h1, h2, h3
+  :font-weight normal
+
+
+a
+  :color #fff
+
+  &:visited
+    :color #fff
+
+  img
+    :border 0px
+
+
+#header
+  :position relative
+  :text-align center
+  :padding-bottom 0.2em
+  :padding-top 1.5em
+
+  h1
+    :margin 0 0 0 0
+    :padding 0
+    :font-size 2.6em
+    :padding-top 0.5em
+    :padding-bottom 0.2em
+
+  h2
+    :margin 0 0 0 0
+    :padding 0
+    :font-size 2.5em
+    :text-transform uppercase
+    :padding-top 0.2em
+    :padding-bottom 0.1em
+
+  p
+    :font-size 1.4em
+    :margin 0
+    :padding 0.2em 0 0 0
+
+  ul#nav
+    :position absolute
+    :top 0
+    :right 0
+    :margin 0
+    :padding 0
+    :list-style none
+
+    li
+      :float left
+      :padding 0 0.5em
+
+
+#content
+  :text-align center
+  :clear both
+  :position relative
+  :line-height 1.4em
+  :font-size 1.1em
+  :padding-top 1em
+
+  p.healthwarning
+    :text-transform uppercase
+    :position absolute
+    :bottom 0
+    :left 0
+    :font-size 0.5em
+
+
+p.wikilinks
+  :border-top solid 1px #fff
+  :padding-top 1em
+
+
+#frmRegister
+  :border-top solid 1px #fff
+  :margin-top 2em
+
+  ul
+    :width 450px
+    :margin 0 auto
+    :text-align left
+    :padding-top 2em
+
+    &.form label
+      :width 200px
+
+
+ul.form
+  label
+    :display block
+    :float left
+    :padding-top 4px
+    :text-align left
+
+    &.radiolabel
+      :display inline
+      :float none
+
+  span.fauxlabel
+    :display block
+    :float left
+    :width 160px
+
+  li
+    :margin 5px 0
+    :padding-bottom 6px!important
+    :list-style-type none
+    :margin 0
+    :padding 0
+
+    &.buttons
+      :clear both
+      :text-align left
+      :padding-top 1em
+
+      input
+        :font-size 1.3em
+
+  input.textbox
+    :width 10em
+    :font-size 1.3em
+
+    &.large
+      :width 250px
+
+    &.small
+      :width 80px
+
+    &.verysmall
+      :width 30px
+
+    &.right
+      :text-align right
+      :padding-right 0.2em
+
+  select
+    :width 175px
+
+    &.small
+      :width 80px
+
+    &.verysmall
+      :width 45px
+
+
+div.details
+  :border-top solid 1px #fff
+  :margin-top 1em
+
+  dl
+    :padding 0
+    :width 750px
+    :margin 1em auto
+
+    a
+      :border none
+
+  dt
+    :margin 0.5em 0
+    :padding 0
+    :width 50%
+    :float left
+    :text-align right
+    :clear both
+
+  dd
+    :margin 0.5em 0
+    :padding 0
+    :width 49%
+    :float right
+    :text-align left
+
+  p
+    :text-align center
+    :clear both
+
+  .remote
+    :padding-top 2em
+
+
+.wiki
+  a
+    &:link, &:visited
+      :color #fff
+      :text-decoration none
+      :border-bottom 1px dotted #fff
+
+  pre
+    :border 1px dotted #ccc
+    :padding 4px
+    :width 640px
+    :overflow auto
+    :margin 3px
+
+  img
+    :border 0px
+
+  h1
+    :margin 18px 0 15px 0
+    :font-size 26px
+
+  hr
+    :margin 10px 0 10px 0
+    :height 0px
+    :overflow hidden
+    :border 0px
+    :border-top 1px solid #fff
+
+  ul
+    :padding 5px 0px 5px 20px
+
+  table
+    :text-align left
+
+  .error
+    :color #fff
+    :font-weight bold
+
+  form
+    :display inline
+
+  #rename-form
+    :display block
+    :margin-bottom 6px
+
+  #content-submit
+    :margin-top 6px
+    :float right
+
+  #content-textarea
+    :width 100%
+
+  input, select
+    :border 1px solid #AAAAAA
+    :padding 2px
+    :font-size 12px
+
+  textarea
+    :border 1px solid #AAAAAA
+    :padding 2px
+    :font-size 12px
+    :padding 3px
+
+  .submit
+    :padding 1px
+
+  #toc
+    :border 1px dashed #11141A
+    :margin 5px 0 5px 10px
+    :padding 6px 5px 7px 0px
+    :float right
+    :padding-right 2em
+    :list-style none
+
+    ul
+      :list-style none
+      :padding 3px 0 3px 10px
+
+      li
+        :font-size 10px
+
+      ul
+        li
+          :font-size 9px
+
+        ul
+          li
+            :font-size 8px
+
+          ul li
+            :font-size 7px
+
+    li
+      :font-size 11px
+      :padding-left 10px
+
+
+ol
+  :padding 5px 0px 5px 20px
+
+
+.tumblog
+  #content
+    :width 420px
+    :margin auto
+    :padding 15px
+    :background-color #fff
+    :position relative
+
+    a
+      :color #DF4141
+
+      &:visited
+        :color #DF4141
+
+    #description a
+      :color #FFF
+
+      &:visited
+        :color #FFF
+
+  h1
+    :padding 30px 0px 50px 0px
+    :margin 0px
+    :text-align center
+    :letter-spacing -2px
+    :line-height 50px
+
+    a
+      :text-decoration none
+
+  #description
+    :position absolute
+    :left 465px
+
+    div#search
+      :text-align right
+
+    #nav_container
+      :font-size 13px
+      :font-weight bold
+
+      .dim
+        :filter alpha(opacity=50)
+        :-moz-opacity 0.5
+        :opacity 0.5
+
+  #searchresultcount
+    :margin 0 0 30px
+    :text-align center
+
+  .post
+    :position relative
+    :margin-bottom 40px
+    :text-align left
+    :font-variant normal
+
+    div
+      &.labels
+        :position absolute
+        :right 435px
+        :text-align right
+        :width 150px
+
+      &.date
+        :background-color #ccc
+        :white-space nowrap
+        :font Normal 20px Helvetica, sans-serif
+        :letter-spacing -1px
+        :color #fff
+        :display inline
+        :padding 3px 5px 0px 5px
+        :line-height 20px
+
+        a
+          :color #fff
+          :text-decoration none
+
+      &.video div.caption a
+        :color #444
+
+    h2
+      :font-size 18px
+      :font-weight Bold
+      :color #c00
+      :letter-spacing -1px
+      :margin 0px 0px 10px 0px
+
+      a
+        :color #c00
+        :text-decoration none
+
+    .regular
+      :font-size 12px
+      :color #444
+      :line-height 17px
+
+      blockquote
+        :font-style italic
+
+    .photo
+      img
+        :border solid 10px #eee
+
+      div.caption
+        :font-size 11px
+        :color #444
+        :margin-top 5px
+
+        a
+          :color #444
+
+    .quote span
+      &.quote
+        :font Bold 28px Helvetica, sans-serif
+        :letter-spacing -1px
+        :color #666
+
+        a
+          :color #666
+
+        big.quote
+          :font Bold 60px Georgia, serif
+          :line-height 8px
+          :vertical-align -20px
+
+      &.source
+        :font-size 16px
+        :font-weight Bold
+        :color #444
+        :letter-spacing -1px
+
+        a
+          :color #444
+
+    .link
+      a.link
+        :font Bold 20px Helvetica, sans-serif
+        :letter-spacing -1px
+        :color #c00
+
+      span.description
+        :font-size 13px
+        :font-weight normal
+        :letter-spacing -1px
+
+    .conversation ul
+      :background-color #f8f8f8
+      :list-style-type none
+      :margin 0px
+      :padding 0px
+      :border-left solid 5px #ddd
+
+      li
+        :border-bottom solid 1px #ddd
+        :font-size 12px
+        :padding 4px 0px 4px 8px
+        :color #444
+
+        span.label
+          :font-weight bold
+          :color #111
+
+    .audio div.caption
+      :font-size 11px
+      :color #444
+      :margin-top 5px
+
+      a
+        :color #444
+
+    .video
+      :width 400px
+      :margin auto
+
+      div.caption
+        :font-size 11px
+        :color #444
+        :margin-top 5px
+
+  #footer
+    :margin 40px 0px 30px 0px
+    :text-align center
+    :font-size 12px
+
+    a
+      :text-decoration none
+      :color #444
+
+      &:hover
+        :text-decoration underline
+
+  .query
+    :font-weight bold
+
+
+#dsq-comments
+  :font-size 12px
+  :color #444
+  :line-height 17px
+
+
+#parlour-tag
+  :padding 10px
+  h1
+    :font-size 2em
+    :margin-bottom 5px
+  li
+    :font-size 1.2em
+    :margin-bottom 4px
