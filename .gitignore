@@ -7,3 +7,4 @@
 /tmp/**/*
 public/stylesheets/parlour_tag.css
 lib/keys.rb
+public/stylesheets/*.css
