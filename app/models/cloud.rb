@@ -1,6 +1,8 @@
 class Cloud 
   attr_accessor :title, :words, :max_count, :min_count  # need these to derive the right CSS class
 
+  BORING_TERMS = ['secretary of state']
+
   def initialize(params)
     @mp = params[:mp]
     @title = "#{@mp.full_name} Written Questions"
@@ -25,7 +27,7 @@ class Cloud
   end
 
   def terms
-    TagExtractor.extract text
+    TagExtractor.extract(text) - BORING_TERMS
   end
 
   def text
