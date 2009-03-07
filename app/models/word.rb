@@ -19,7 +19,7 @@ class Word
   end
 
   def size_factor
-    (Math.log(value) / Math.log(3) + 1) / 2
+    (Math.log(value) / Math.log(3) + 1) * 1.5
   end
 
   private
