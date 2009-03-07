@@ -4,7 +4,7 @@ Parlour tag creates tag clouds from MPs written questions.
 
 The TheyWorkForYou API is used to find an MP's recent written questions, these are passed through the Yahoo Term Extractor and counted to generate a list of tags.
 
-Created at rewiredstate.org by
+Created at http://rewiredstate.org by
 David Salgado   - http://github.com/digitalronin
 Erin Staniland  - http://github.com/erino
 Tom ten Thij    - http://github.com/tomtt
