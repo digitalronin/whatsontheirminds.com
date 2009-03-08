@@ -10,7 +10,7 @@ class Word
 
   # distance from left in percentages
   def x
-    (coordinates.x * 300).to_i
+    (coordinates.x * 200).to_i
   end
 
   # distance from top in percentages
