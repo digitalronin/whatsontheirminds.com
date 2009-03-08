@@ -15,6 +15,7 @@ set :git_enable_submodules, 1
 
 set :ssh_options, { :forward_agent => true, :compression => false }
 set :user, 'appuser'
+set :rails_env, 'production'
 
 role :app, "rewiredstate"
 role :web, "rewiredstate"
