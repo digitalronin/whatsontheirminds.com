@@ -18,6 +18,10 @@ class Word
     (coordinates.y * 400).to_i
   end
 
+  def colour
+    phrase_colour
+  end
+
   def size_factor
     (Math.log(value) / Math.log(3) + 1) * 1.5
   end
