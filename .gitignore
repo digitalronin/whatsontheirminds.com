@@ -2,11 +2,11 @@
 *~
 *.swp
 *.log
-/config/database.yml
 /coverage
 /tmp/**/*
-public/stylesheets/parlour_tag.css
+/config/database.yml
 lib/keys.rb
+public/stylesheets/parlour_tag.css
 public/stylesheets/common.css
-public/mpspublic/mps.html
+public/mps.html
 public/mps
