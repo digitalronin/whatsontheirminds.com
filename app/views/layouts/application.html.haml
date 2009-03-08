@@ -3,5 +3,6 @@
   %head
     = stylesheet_link_tag 'reset'
     = stylesheet_link_tag 'parlour_tag'
+    %title= h @title || "What's On Their Minds?"
   %body
     = yield
