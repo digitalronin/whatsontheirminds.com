@@ -15,7 +15,7 @@ class Word
 
   # distance from top in percentages
   def y
-    (coordinates.y * 400).to_i
+    (coordinates.y * 300).to_i
   end
 
   def colour
