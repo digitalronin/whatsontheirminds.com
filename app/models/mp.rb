@@ -7,7 +7,6 @@ class Mp
 
   def self.fetch_list
     objs = self.twfy_client.mps
-    RAILS_DEFAULT_LOGGER.debug objs.inspect
     mps = objs.collect do |obj| 
       self.instantiate obj
     end
@@ -33,7 +32,7 @@ class Mp
 
   def self.instantiate(obj)
     mp = Mp.new
-    mp.full_name = obj.respond_to?(:full_name) ? obj.full_name.to_s : obj.name.to_s
+    mp.full_name = obj.full_name.nil? ? obj.name.to_s : obj.full_name.to_s
     mp.person_id = obj.person_id
     mp.party = obj.party
     mp.constituency = obj.constituency.name
@@ -41,7 +40,6 @@ class Mp
   end
 
   def surname
-    RAILS_DEFAULT_LOGGER.debug "SURNAME: #{@full_name}"
     @full_name.split(/ /)[-1]
   end
 
