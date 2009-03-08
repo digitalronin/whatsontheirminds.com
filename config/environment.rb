@@ -22,9 +22,9 @@ Rails::Initializer.run do |config|
 
   # Specify gems that this application depends on. 
   # They can then be installed with "rake gems:install" on new installations.
-  config.gem "twfy"
-  config.gem "haml"
   config.gem "json"
+  config.gem "haml"
+  config.gem "twfy"
   
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
