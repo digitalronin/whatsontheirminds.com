@@ -11,9 +11,23 @@ set :deploy_to, "/var/www/#{application}"
 set :scm, :git
 set :git_enable_submodules, 1
 
-depend :remote, "#{deploy_to}/shared/system/keys.rb"
+set :ssh_options, { :forward_agent => true, :compression => false }
+set :user, 'appuser'
 
 role :app, "rewiredstate"
 role :web, "rewiredstate"
 role :db, "rewiredstate", :primary => true
 
+namespace :deploy do
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+
+  desc "Copy required files from shared dirs"
+  task :copy_shared, :roles => :app do
+    run "cp #{shared_path}/system/keys.rb #{current_path}/lib/"
+  end
+end
+
+before 'deploy:symlink', 'deploy:copy_shared'
