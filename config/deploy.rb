@@ -32,4 +32,4 @@ namespace :deploy do
   end
 end
 
-before 'deploy:symlink', 'deploy:copy_shared'
+after 'deploy:symlink', 'deploy:copy_shared'
