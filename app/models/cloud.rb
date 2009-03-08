@@ -1,7 +1,10 @@
 class Cloud 
   attr_accessor :title, :words, :max_count, :min_count  # need these to derive the right CSS class
 
-  BORING_TERMS = ['secretary of state']
+  BORING_TERMS = [
+    'secretary of state',
+    'secretary of state for the home department'
+  ]
 
   def initialize(params)
     @mp = params[:mp]
