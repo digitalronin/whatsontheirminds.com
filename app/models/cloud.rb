@@ -6,6 +6,12 @@ class Cloud
     'secretary of state for the home department'
   ]
 
+  # Yahoo term extractor likes sending back 'developme'. I have no
+  # idea why. We replace it with 'development' later on.
+  BROKEN_TERMS = {
+    'developme' => 'development'
+  }
+
   def initialize(params)
     @mp = params[:mp]
     @title = "#{@mp.full_name} Written Questions"
@@ -30,7 +36,14 @@ class Cloud
   end
 
   def terms
-    TagExtractor.extract(text) - BORING_TERMS
+    list = TagExtractor.extract(text) - BORING_TERMS
+    BROKEN_TERMS.each do |term, replacement|
+      if list.include? term
+        list.delete term
+        list << replacement
+      end
+    end
+    list
   end
 
   def text
