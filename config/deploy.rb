@@ -30,6 +30,7 @@ namespace :deploy do
   desc "Copy required files from shared dirs"
   task :copy_shared, :roles => :app do
     run "cp #{shared_path}/system/keys.rb #{current_path}/lib/"
+    run "cp #{shared_path}/system/database.yml #{release_path}/config/"
   end
 end
 
