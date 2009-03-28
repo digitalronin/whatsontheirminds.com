@@ -18,7 +18,13 @@ class Cloud < ActiveRecord::Base
   def initialize(params = nil)
     super params
     tc = TextChunk.new mp.text_for_cloud
+    # Sometimes, the term extractor returns nothing.
+    # So, do one retry, if that happens
     self.terms = tc.terms_with_counts
+    if self.terms.size == 0
+      sleep 1
+      self.terms = tc.terms_with_counts
+    end
   end
 
   def title
