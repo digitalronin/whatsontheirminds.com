@@ -36,7 +36,7 @@ class Cloud < ActiveRecord::Base
   # Sometimes the Yahoo! Term Extractor gives back nothing.
   # Don't save the cloud if that happens.
   def has_some_terms
-    if self.terms.size == 0
+    if self.terms.size == 0 && !mp.text_for_cloud.blank?
       errors.add :terms, "must not be empty"
     end
   end
