@@ -93,9 +93,8 @@ class Mp < ActiveRecord::Base
   end
 
   def written_question_text_has_changed?
-    return true if written_questions_text.blank?
     text = get_wrans
-    if self.written_questions_text != text
+    if written_questions_text.blank? || self.written_questions_text != text
       self.written_questions_text = text
       save!
       return true
