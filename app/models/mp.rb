@@ -75,7 +75,10 @@ class Mp < ActiveRecord::Base
 
   def get_cloud
     cloud = self.clouds.last
-    return clouds.create if cloud.nil? or written_question_text_has_changed?
+    if cloud.nil? or written_question_text_has_changed?
+      cloud = clouds.new
+      cloud.save!
+    end
     cloud
   end
 

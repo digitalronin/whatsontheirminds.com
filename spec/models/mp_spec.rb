@@ -11,6 +11,19 @@ describe Mp do
     }
   end
 
+  it "should not save a cloud with no terms" do
+    mp = Mp.make
+    TagExtractor.stub!(:extract).and_return([])
+    twfy = mock_model Twfy::Client
+    Twfy::Client.stub!(:new).and_return twfy
+    dummy = mock "Answers", :rows => [{'body' => sample_text}]
+    twfy.stub!(:wrans).with(:person => mp.person_id).and_return(dummy)
+    lambda { mp.get_cloud }.should raise_error(ActiveRecord::RecordInvalid)
+    Term.count.should == 0
+    Cloud.count.should == 0
+  end
+
+
   it "should update cloud if wrans is different" do
     mp = Mp.make
     mock_twfy_for_mp mp, "Here is the first text"
