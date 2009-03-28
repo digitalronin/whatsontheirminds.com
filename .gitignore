@@ -10,4 +10,5 @@ public/stylesheets/parlour_tag.css
 public/stylesheets/common.css
 public/mps.html
 public/mps
+db/schema.rb
 tags

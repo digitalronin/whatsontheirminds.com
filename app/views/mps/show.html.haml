@@ -3,11 +3,12 @@
   %p.back_link
     =link_to 'back', mps_path
 
-  %h1= @mp.cloud.title
-
-  %h2= "#{@mp.party} MP for #{@mp.constituency}"
+  - cloud = @mp.get_cloud
+  %h1= cloud.title
+  %h3= "#{@mp.party} MP for #{@mp.constituency}"
+  %h2= "Updated on #{cloud.created_at.to_date.to_s(:db)}"
 
   #cloud
     %ul
-      = render :partial => @mp.cloud.words
+      = render :partial => cloud.terms
 

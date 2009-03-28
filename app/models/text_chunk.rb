@@ -37,11 +37,11 @@ class TextChunk
       RAILS_DEFAULT_LOGGER.debug "Counting: #{term}, #{value}"
       @max_count = [ @max_count, value ].max
       @min_count = [ @min_count, value ].min
-      word = Word.new(term, value)
-      rtn << word
+      term = Term.new(:text => term, :value => value)
+      rtn << term
     end
-    # Return words in descending order of occurrences, so that the 
-    # biggest words are drawn on the page first, with smaller words
+    # Return terms in descending order of occurrences, so that the 
+    # biggest terms are drawn on the page first, with smaller terms
     # on top, to make it easier to read the tag cloud
     rtn.sort {|a,b| a.value <=> b.value}.reverse
   end
