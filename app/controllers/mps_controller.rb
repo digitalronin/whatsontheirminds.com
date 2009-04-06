@@ -7,6 +7,7 @@ class MpsController < ApplicationController
 
   def show
     @mp = Mp.from_person_id params[:id]
+    @cloud = @mp.get_cloud
   end
 end
 

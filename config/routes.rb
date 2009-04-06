@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :mps
+  map.resources :mps, :clouds
 
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -10,4 +10,12 @@ module ApplicationHelper
     %[<li class='term' style="#{style}">#{term.text}</li>\n]
   end
 
+  def mp_clouds_list(mp)
+    clouds = mp.clouds.collect do |cloud|
+      text = cloud.created_at.to_date.to_s(:db)
+      link_to text, cloud_path(cloud)
+    end
+    clouds.join "|"
+  end
+
 end
